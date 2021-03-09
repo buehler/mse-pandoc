@@ -21,5 +21,7 @@ RUN apk add --update --no-cache \
 RUN curl -fsSL http://sourceforge.net/projects/plantuml/files/plantuml.$PLANTUML_VERSION.jar/download -o /usr/local/plantuml.jar && \
     chmod a+r /usr/local/plantuml.jar
 
+COPY plantuml /usr/local/bin/
+
 RUN pip install --no-cache --upgrade pandoc-fignos pandoc-tablenos pandoc-secnos pandoc-plantuml-filter && \
     tlmgr update --self && tlmgr install cleveref
