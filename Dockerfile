@@ -5,6 +5,7 @@ ENV PYTHONUNBUFFERED=1 \
 ENTRYPOINT [ "pandoc" ]
 
 RUN apk add --update --no-cache \
+    make \
     python3 \
     python3-dev \
     py3-pip \
