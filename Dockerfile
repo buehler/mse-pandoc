@@ -1,4 +1,4 @@
-FROM pandoc/latex:2.11.4
+FROM pandoc/latex:2.12
 
 ENV PYTHONUNBUFFERED=1 \
     PLANTUML_VERSION=1.2021.2
@@ -25,5 +25,6 @@ RUN curl -fsSL http://sourceforge.net/projects/plantuml/files/plantuml.$PLANTUML
     chmod a+r /usr/local/plantuml.jar && \
     chmod +x /usr/local/bin/plantuml
 
-RUN pip install --no-cache --upgrade pandoc-fignos pandoc-tablenos pandoc-secnos pandoc-plantuml-filter && \
-    tlmgr update --self && tlmgr install cleveref
+RUN pip install --no-cache --upgrade pandoc-fignos pandoc-tablenos pandoc-secnos pandoc-plantuml-filter
+
+RUN tlmgr update --self && tlmgr install cleveref
