@@ -2,7 +2,7 @@ FROM pandoc/latex:2.13
 
 ENV PYTHONUNBUFFERED=1 \
     PLANTUML_VERSION=1.2021.2
-ENTRYPOINT [ "pandoc" ]
+ENTRYPOINT []
 
 RUN apk add --update --no-cache \
     make \
