@@ -1,4 +1,4 @@
-FROM pandoc/latex:2.13
+FROM pandoc/latex:2.14
 
 ENV PYTHONUNBUFFERED=1 \
     PLANTUML_VERSION=1.2021.2
