@@ -28,3 +28,5 @@ RUN curl -fsSL http://sourceforge.net/projects/plantuml/files/plantuml.$PLANTUML
 RUN pip install --no-cache --upgrade pandoc-fignos pandoc-tablenos pandoc-secnos pandoc-plantuml-filter
 
 RUN tlmgr update --self && tlmgr install cleveref
+
+LABEL org.opencontainers.image.source = "https://github.com/buehler/mse-pandoc"
