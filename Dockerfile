@@ -1,7 +1,7 @@
-FROM pandoc/latex:2.13
+FROM pandoc/latex:2.17
 
 ENV PYTHONUNBUFFERED=1 \
-    PLANTUML_VERSION=1.2021.2
+    PLANTUML_VERSION=1.2022.0
 ENTRYPOINT []
 
 RUN apk add --update --no-cache \
