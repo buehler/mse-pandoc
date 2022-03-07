@@ -1,7 +1,7 @@
 FROM pandoc/latex:2.17
 
 ENV PYTHONUNBUFFERED=1 \
-    PLANTUML_VERSION=1.2022.0
+    PLANTUML_VERSION=1.2022.2
 ENTRYPOINT []
 
 RUN apk add --update --no-cache \
@@ -27,6 +27,6 @@ RUN curl -fsSL http://sourceforge.net/projects/plantuml/files/plantuml.$PLANTUML
 
 RUN pip install --no-cache --upgrade pandoc-fignos pandoc-tablenos pandoc-secnos pandoc-plantuml-filter
 
-RUN tlmgr update --self && tlmgr install cleveref koma-script
+RUN tlmgr update --self && tlmgr install cleveref koma-script float
 
 LABEL org.opencontainers.image.source = "https://github.com/buehler/mse-pandoc"
